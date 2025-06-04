@@ -1,0 +1,84 @@
+body {
+  font-family: sans-serif;
+  background: black;
+  margin: 0;
+  padding: 2rem;
+}
+
+.board {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.column {
+  background: #404C44;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 300px;
+  min-height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.column form {
+  margin-bottom: 1rem;
+}
+
+.column input {
+  width: 80%;
+  padding: 0.4rem;
+  font-size: 1rem;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background: #1e1e1e;
+  color: white;
+}
+
+.card {
+  background: #3a3a3a;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.dragging {
+  transform: scale(1.05);
+  background-color: #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  cursor: grabbing;
+}
+
+.ghost {
+  opacity: 0.3;
+}
+
+.drag-handle {
+  flex-grow: 1;
+  cursor: grab;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .column {
+    width: 100%;
+  }
+}
